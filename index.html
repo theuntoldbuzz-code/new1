@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maz Hairdressing & Grooming Room | Nottingham</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #fdfdfd; color: #1a1a1a; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        
+        .accent-color { color: #c49a45; } /* Premium Gold */
+        .bg-accent { background-color: #c49a45; }
+        .border-accent { border-color: #c49a45; }
+        .hover-bg-accent:hover { background-color: #b0893d; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-black text-gray-300 text-xs py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div><i class="fas fa-map-marker-alt mr-2 accent-color"></i> 11 Market St, Nottingham NG1 6HY</div>
+            <div class="flex space-x-6">
+                <span><i class="fas fa-clock mr-2 accent-color"></i> Mon-Sat: 10am - 7pm</span>
+                <span><i class="fas fa-phone mr-2 accent-color"></i> +44 7717 117859</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white text-black shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex flex-col">
+                        <span class="text-3xl font-bold font-serif tracking-widest uppercase">Maz</span>
+                        <span class="text-xs tracking-[0.2em] text-gray-500 uppercase">Hairdressing & Grooming</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="index.html" class="text-black font-semibold hover:text-[#c49a45] transition uppercase text-sm tracking-wider">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-[#c49a45] transition uppercase text-sm tracking-wider">Services</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-[#c49a45] transition uppercase text-sm tracking-wider">Contact</a>
+                    <a href="contact.html" class="bg-black text-white px-8 py-3 rounded-none font-semibold hover:bg-[#c49a45] transition shadow-md uppercase text-sm tracking-widest">Book Appointment</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black hover:text-[#c49a45] focus:outline-none">
+                        <i class="fas fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t pb-4 px-4 shadow-lg">
+            <a href="index.html" class="block py-3 border-b text-black font-semibold">Home</a>
+            <a href="services.html" class="block py-3 border-b text-gray-600">Services</a>
+            <a href="contact.html" class="block py-3 border-b text-gray-600">Contact</a>
+            <a href="contact.html" class="block py-3 mt-4 text-center bg-black text-white font-semibold uppercase tracking-wider">Book Appointment</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-black h-[85vh] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521590832167-7bfc17484d20?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+            <div class="max-w-2xl">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="h-[1px] w-12 bg-accent"></div>
+                    <span class="text-white uppercase tracking-[0.2em] text-sm">Nottingham's Premier Salon</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl text-white font-bold mb-6 leading-tight">Mastering the Art of <span class="italic accent-color">Grooming</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed">Experience a tailored approach to hair and styling. Whether you need a sharp clipper cut or a refined restyle, our highly-rated team delivers perfection in every detail.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="bg-accent text-white text-center px-10 py-4 font-semibold hover-bg-accent transition uppercase tracking-widest text-sm shadow-xl">Book Your Visit</a>
+                    <a href="services.html" class="bg-transparent border border-white text-white text-center px-10 py-4 font-semibold hover:bg-white hover:text-black transition uppercase tracking-widest text-sm">Our Services</a>
+                </div>
+                
+                <div class="mt-12 flex items-center space-x-6 text-white">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-black" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        <img class="w-10 h-10 rounded-full border-2 border-black" src="https://randomuser.me/api/portraits/men/44.jpg" alt="Client">
+                        <img class="w-10 h-10 rounded-full border-2 border-black" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                    </div>
+                    <div>
+                        <div class="text-[#c49a45] text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-xs text-gray-400 mt-1">4.9★ Treatwell & 5.0★ Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section with Image -->
+    <section class="py-24 px-4 md:px-0 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barber cutting hair" class="w-full h-[600px] object-cover shadow-2xl">
+                    <div class="absolute -bottom-8 -right-8 bg-black text-white p-8 shadow-xl hidden md:block">
+                        <h4 class="text-5xl font-serif accent-color mb-2">5.0★</h4>
+                        <p class="uppercase tracking-widest text-xs">Top Rated on Google</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="accent-color uppercase tracking-[0.2em] text-sm font-semibold mb-4">About Maz Hairdressing</h4>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">A Welcoming Atmosphere & <span class="italic">Expert Styling</span></h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Located at 11 Market Street in the heart of Nottingham, Maz Hairdressing & Grooming Room is built on a passion for quality and an unwavering attention to detail. 
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-10">
+                        We don't just cut hair; we curate your personal style. Our clients appreciate our friendly chats, inclusive vibe, and the fact that we listen carefully to what you want. From precise fades to ladies' wash and blow dries, you're in the hands of professionals.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-10 border-t border-b py-8">
+                        <div>
+                            <h3 class="font-bold text-2xl mb-1 text-black">270+</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider">5-Star Reviews</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl mb-1 text-black">100%</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider">Client Satisfaction</p>
+                        </div>
+                    </div>
+                    <a href="services.html" class="inline-flex items-center text-black font-semibold uppercase tracking-wider hover:text-[#c49a45] transition">
+                        Discover Our Services <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="py-24 bg-gray-50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="accent-color uppercase tracking-[0.2em] text-sm font-semibold mb-4">What We Do</h4>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Tailored <span class="italic">Services</span></h2>
+                <p class="text-gray-600 text-lg">We offer a comprehensive range of hairdressing and grooming services for everyone. Here is a glimpse of what we provide.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-white overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Precision Clipper Haircut" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 font-serif">Clipper & Scissor Cuts</h3>
+                        <p class="text-gray-600 mb-6 font-light">Sharp, clean, and perfectly blended. Tailored exactly to your head shape and style preferences.</p>
+                        <a href="services.html" class="text-sm font-semibold uppercase tracking-widest text-[#c49a45] hover:text-black transition">View Pricing</a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="group bg-white overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ladies Styling" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 font-serif">Ladies Styling</h3>
+                        <p class="text-gray-600 mb-6 font-light">From a stunning wash & blow dry to a precision haircut, experience professional care that elevates your look.</p>
+                        <a href="services.html" class="text-sm font-semibold uppercase tracking-widest text-[#c49a45] hover:text-black transition">View Pricing</a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="group bg-white overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1621607512282-5ceb292e4785?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grooming & Beards" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-3 font-serif">Beard Grooming</h3>
+                        <p class="text-gray-600 mb-6 font-light">Expert beard shaping, trimming, and hot towel treatments to keep your facial hair looking flawless.</p>
+                        <a href="services.html" class="text-sm font-semibold uppercase tracking-widest text-[#c49a45] hover:text-black transition">View Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlighted Testimonial (High Converting) -->
+    <section class="py-24 bg-black text-white bg-cover bg-fixed bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <i class="fas fa-quote-right text-5xl accent-color mb-8"></i>
+            <h2 class="text-3xl md:text-4xl font-serif leading-relaxed mb-8">"Genuinely the best haircut I've had ever in Nottingham maybe even my best haircut ever. Maz has excellent taste and knows what style will look good on you!"</h2>
+            <div class="flex items-center justify-center space-x-4">
+                <div class="w-12 h-[2px] bg-accent"></div>
+                <p class="text-xl uppercase tracking-widest font-semibold">Matt Wilkinson</p>
+                <div class="w-12 h-[2px] bg-accent"></div>
+            </div>
+            <div class="mt-4 text-[#c49a45] text-lg"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            
+            <div class="mt-12">
+                <a href="contact.html" class="inline-block bg-white text-black px-10 py-4 font-semibold hover:bg-gray-200 transition uppercase tracking-widest text-sm shadow-xl">Book Your Appointment Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111] text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Brand -->
+            <div class="md:col-span-1">
+                <a href="index.html" class="flex flex-col mb-6">
+                    <span class="text-3xl font-bold font-serif tracking-widest uppercase text-white">Maz</span>
+                    <span class="text-xs tracking-[0.2em] text-[#c49a45] uppercase">Grooming</span>
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">Providing top-tier hairdressing and grooming experiences in a welcoming, professional atmosphere.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#c49a45] hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#c49a45] hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-white text-lg font-serif font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 accent-color"></i> 
+                        <span>11 Market Street<br>Nottingham NG1 6HY<br>United Kingdom</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 accent-color"></i> 
+                        <span>+44 7717 117859</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fab fa-whatsapp mr-3 accent-color"></i> 
+                        <span>Available on WhatsApp</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Hours -->
+            <div>
+                <h4 class="text-white text-lg font-serif font-bold mb-6">Opening Hours</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Monday - Friday</span> <span>10:00 - 19:00</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Saturday</span> <span class="text-white">09:00 - 18:00</span></li>
+                    <li class="flex justify-between pb-2"><span>Sunday</span> <span class="text-[#c49a45]">Closed</span></li>
+                </ul>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white text-lg font-serif font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-[#c49a45] transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Home</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-[#c49a45] transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Services & Pricing</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-[#c49a45] transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Book Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Maz Hairdressing & Grooming Room. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">Designed for elegance and professional styling.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
